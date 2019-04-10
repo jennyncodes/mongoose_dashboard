@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dogs</title>
+</head>
+<body>
+	<h1>Hi Doggies</h1>
+	<a href="/new/">Add a new dog</a>
+
+	<fieldset>
+		<legend>Dogs:</legend>
+		<table border="1">
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Action</th>			
+		</tr>
+		<% for(var i in dogs){ %>
+		 	<div class="dog">
+				<tr>
+					<td><a href="dogs/<%=dogs[i]._id %>"><%=dogs[i].name %></a></td>
+					<td><%=dogs[i].age %></td>
+					<td><a href="dogs/edit/<%=dogs[i].id %>">Edit</a> |<form action="dogs/delete/<%=dogs[i]._id%>" method="post"><input type="submit" value="Delete"></input></form></td>
+				</tr>
+			</div>
+		<% } %>
+		</table>
+	</fieldset>
+
+</body>
+</html>

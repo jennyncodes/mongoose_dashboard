@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Dog</title>
+</head>
+<body>
+        <form method="post" action="/dogs/<%=dog._id %>">
+            <label for="name">Name:</label>
+            <input type="text" name="name" value="<%=dog.name%>">
+            <label for="age">Age:</label>
+            <input type="text" name="age" value="<%=dog.age%>">
+            <input type="submit" name="submit" value="Update">
+        </form>
+        <a href="/">Discard Changes</a>
+</body>
+</html>
